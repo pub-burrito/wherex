@@ -26,7 +26,7 @@ module Wherex
       end
     end
 
-    def visit_Regexp o; ::ActiveRecord::Base.connection.regexp_quote(o.source) end
+    def visit_Regexp o, attribute = nil; ::ActiveRecord::Base.connection.regexp_quote(o.source) end
 
   end
 end
